@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMail;
 use App\Models\UsersRegistration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UserRegistrationsController extends Controller
 {
@@ -38,6 +40,11 @@ class UserRegistrationsController extends Controller
             "unit_number" => 'required',         
         ]);
         UsersRegistration::create($validateData);
+
+        //send email when success registred
+        Mail::to($validateData['email'])
+            ->send(new SendMail($validateData));
+
         return redirect('/success');
     }
 
