@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\UserRegistrationsController;
-use App\Models\UsersRegistration;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserRegistrationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,15 @@ Route::get('/success', function () {
 });
 
 Route::resource('registration', UserRegistrationsController::class);
+
+//admin
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest'); //only guest can access
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest'); //only guest can access
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
+})->middleware('auth');//only user already login
