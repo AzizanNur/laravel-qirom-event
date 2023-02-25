@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserRegistrationsController;
+use App\Models\UsersRegistration;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,9 @@ Route::get('/', function () {
 Route::get('/detail', function () {
     return view('detail');
 });
+
+Route::get('/success', function () {
+    return view('success_page');
+});
+
+Route::resource('registration', UserRegistrationsController::class);

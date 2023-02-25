@@ -56,7 +56,8 @@
                         <!--begin::Card body-->
                         <div class="card-body pt-5">
                             <!--begin::Form-->
-                            <form id="kt_ecommerce_settings_general_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="/registration" method="POST">
+                            <form id="kt_ecommerce_settings_general_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="/registration" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <!--begin::Input group-->
                                 <div class="fv-row mb-7 fv-plugins-icon-container">
                                     <!--begin::Label-->
@@ -96,7 +97,7 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="email" class="form-control form-control-solid" name="email" value="youremail@gmail.com">
+                                            <input type="email" class="form-control form-control-solid" required name="email" value="youremail@gmail.com">
                                             <!--end::Input-->
                                         <div class="fv-plugins-message-container invalid-feedback"></div></div>
                                         <!--end::Input group-->
@@ -113,7 +114,7 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" class="form-control form-control-solid" name="phone" value="">
+                                            <input type="text" class="form-control form-control-solid" required name="phone" value="">
                                             <!--end::Input-->
                                         </div>
                                         <!--end::Input group-->
