@@ -44,6 +44,6 @@ Route::get('/dashboard', function(){
 })->middleware('auth');//only user already login
 
 Route::get('/dashboard/posts/checkSlug', [DashboardUserRegistrationController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/posts', DashboardUserRegistrationController::class)->middleware('auth');
+Route::resource('/dashboard/user_registration', DashboardUserRegistrationController::class)->middleware('auth');
 
 // Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');

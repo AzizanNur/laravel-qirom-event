@@ -36,7 +36,7 @@ class DashboardUserRegistrationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(UserRegistration $userRegistration)
+    public function show(UsersRegistration $userRegistration)
     {
         //
     }
@@ -44,7 +44,7 @@ class DashboardUserRegistrationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(UserRegistration $userRegistration)
+    public function edit(UsersRegistration $userRegistration)
     {
         //
     }
@@ -52,7 +52,7 @@ class DashboardUserRegistrationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, UserRegistration $userRegistration)
+    public function update(Request $request, UsersRegistration $userRegistration)
     {
         //
     }
@@ -60,7 +60,7 @@ class DashboardUserRegistrationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UserRegistration $userRegistration)
+    public function destroy(UsersRegistration $userRegistration)
     {
         //
     }
