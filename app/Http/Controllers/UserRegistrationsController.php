@@ -28,18 +28,17 @@ class UserRegistrationsController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            "email" => 'required',
-            "name" => 'required',
+        $validateData = $request->validate([
+            'name'      => 'required|max:255|unique:users',
+            'email'     => 'required|email|max:255|unique:users_registrations,email',
             "street_name" => 'required',
             "phone" => 'required',
             "house_no" => 'required',
             "postal_code" => 'required',
-            "unit_number" => 'required',
+            "unit_number" => 'required',         
         ]);
-        UsersRegistration::create($validatedData);
+        UsersRegistration::create($validateData);
         return redirect('/success');
-
     }
 
     /**

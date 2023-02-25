@@ -62,12 +62,12 @@
                                 <div class="fv-row mb-7 fv-plugins-icon-container">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span class="required">Fullname</span>
+                                        <span>Fullname</span>
                                         <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" aria-label="Enter the contact's name." data-bs-original-title="Enter the contact's name." data-kt-initialized="1"></i>
                                     </label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" required name="name" value="">
+                                    <input type="text" class="form-control form-control-solid" required name="name" value="{{ old('name') }}">
                                     <!--end::Input-->
                                 <div class="fv-plugins-message-container invalid-feedback"></div></div>
                                 <!--end::Input group-->
@@ -80,7 +80,7 @@
                                     </label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" required name="street_name" value="">
+                                    <input type="text" class="form-control form-control-solid" required name="street_name" value="{{ old('street_name') }}">
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
@@ -97,7 +97,12 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="email" class="form-control form-control-solid" required name="email" value="youremail@gmail.com">
+                                            <input type="email" class="form-control form-control-solid @error('email') is-invalid @enderror" required name="email" value="{{ old('email') }}">
+                                            @error('email')
+                                            <div class="invalid-feedback">
+                                              {{ $message }}
+                                            </div>
+                                            @enderror 
                                             <!--end::Input-->
                                         <div class="fv-plugins-message-container invalid-feedback"></div></div>
                                         <!--end::Input group-->
@@ -114,7 +119,7 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" class="form-control form-control-solid" required name="phone" value="">
+                                            <input type="text" class="form-control form-control-solid" required name="phone" value="{{ old('phone') }}">
                                             <!--end::Input-->
                                         </div>
                                         <!--end::Input group-->
@@ -136,7 +141,7 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" class="form-control form-control-solid" name="house_no" value="">
+                                            <input type="text" class="form-control form-control-solid" name="house_no" value="{{ old('house_no') }}">
                                             <!--end::Input-->
                                         <div class="fv-plugins-message-container invalid-feedback"></div></div>
                                         <!--end::Input group-->
@@ -153,7 +158,7 @@
                                             </label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <input type="text" class="form-control form-control-solid" name="unit_number" value="">
+                                            <input type="text" class="form-control form-control-solid" name="unit_number" value="{{ old('unit_number') }}">
                                             <!--end::Input-->
                                         </div>
                                         <!--end::Input group-->
@@ -171,7 +176,7 @@
                                     </label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" class="form-control form-control-solid" required name="postal_code" value="">
+                                    <input type="text" class="form-control form-control-solid" required name="postal_code" value="{{ old('postal_code') }}">
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
