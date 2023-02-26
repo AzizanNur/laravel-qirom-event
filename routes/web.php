@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardEventController;
@@ -19,9 +20,7 @@ use App\Http\Controllers\DashboardUserRegistrationController;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [HomepageController::class, 'index']);
 
 Route::get('/detail', function () {
     return view('detail');
