@@ -132,6 +132,7 @@
                                     <!--begin::Input-->
                                     <input type="text" class="form-control form-control-solid @error('name') is-invalid @enderror" required name="name" value="{{ old('name') }}">
                                     <input type="hidden" class="form-control form-control-solid @error('name') is-invalid @enderror" required name="id_event" value="{{ $event['id'] }}">
+                                    <input type="hidden" class="form-control form-control-solid @error('name') is-invalid @enderror" required name="nama_event" value="{{ $event['title'] }}">
                                     @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}

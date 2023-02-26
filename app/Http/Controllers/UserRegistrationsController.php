@@ -44,7 +44,7 @@ class UserRegistrationsController extends Controller
 
         //send email when success registred
         Mail::to($validateData['email'])
-            ->send(new SendMail($validateData));
+            ->send(new SendMail($request->all()));
 
         return redirect('/success');
     }

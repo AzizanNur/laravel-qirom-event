@@ -13,7 +13,7 @@
 			<li>Nama: {{ $details['name'] }}</li>
 			<li>Phone: {{ $details['phone'] }}</li>
 			<li>Street Name: {{ $details['street_name'] }}</li>
-			<li>Join Event: [EVENT RAMADAN]</li>			
+			<li>Join Event: {{ $details['nama_event'] }}</li>			
 		</ul>
 		<p style="color:#333; font-size:18px; font-family:Arial, sans-serif;">Thanks you for join this event</p>
 		<p style="color:#333; font-size:18px; font-family:Arial, sans-serif;">Best,</p>
