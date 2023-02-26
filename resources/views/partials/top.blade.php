@@ -14,7 +14,7 @@
         </div>
         <!--end::Heaeder menu toggle-->
         <a href="/">
-            <img alt="Logo" src="assets/media/illustrations/sketchy-1/logo masjid.png" class="theme-light-show h-80px h-lg-130px" />
+            <img alt="Logo" src="assets/media/illustrations/sketchy-1/logo masjid.png" class="theme-light-show h-60px h-lg-130px" />
             <img alt="Logo" src="assets/media/logos/demo11-dark.svg" class="theme-dark-show h-20px h-lg-30px" />
         </a>
     </div>

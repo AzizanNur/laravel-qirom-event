@@ -26,6 +26,7 @@
           @else
             <img class="img-preview img-fluid mb-3 col-sm-5" />
           @endif
+          <input class="form-control" type="text" id="image_old" name="image_old" value="{{ $post->image }}">
           <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
           
           @error('image')

@@ -6,6 +6,8 @@ use App\Models\Events;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Exception;
 
 class DashboardEventController extends Controller
@@ -35,19 +37,18 @@ class DashboardEventController extends Controller
      */
     public function store(Request $request)
     {
-        // print_r('tambah ya'); die;
         $validatedData = $request->validate([
             "title" => 'required|max:255',
             'text_button' => 'required|',
-            // 'image' => 'image|file|max:1024'
+            'image' => 'image|file|max:1024'
         ]);    
         
         $slug = str_replace(' ','-', strtolower($validatedData['title'])).'-'.rand(1000,9999);
         $validatedData['slug'] = $slug;
         
-        // if($request->file('image')){
-        //     $validatedData['image'] = $request->file('image')->store('post-images');
-        // }
+        if($request->file('image')){
+            $validatedData['image'] = $request->file('image')->store('images');
+        }
 
         Events::create($validatedData);
         return redirect('/dashboard/events')->with('success', 'news post has been added');
@@ -81,32 +82,23 @@ class DashboardEventController extends Controller
     public function update(Request $request, $id)
     {
          try {
-            // validation input
-            $validator = Validator::make( $request->all(),[
+            $rules = [
                 "title" => 'required|max:255',
-                'text_button' => 'required|',
-                // 'image' => 'image|file|max:1024'
-            ]);
-
-            // validation errors
-            if ($validator->fails()) {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'validation error',
-                    'errors' => $validator->errors()
-                ], 401); 
-            }
+                'image' => 'image|file|max:1024',                
+            ];      
             
-            // find data by id
-            $item = Events::findOrFail($id);
+            $validatedData = $request->validate($rules);
+    
+            if($request->file('image')){
+                if($request->image_old){
+                    Storage::delete($request->image_old);
+                }
+                $validatedData['image'] = $request->file('image')->store('images');
+            }    
             
-            // save data
-            $item->update($request->all());
+            Events::where('id', $id)->update($validatedData);
+            return redirect('/dashboard/events')->with('success', 'data has been updated');
 
-            // if success save data
-            if ($item) {
-                return redirect('/dashboard/events')->with('success', 'Data has been updated');
-            }  
         } catch (Exception $error) {
             // if error
             return response()->json([
