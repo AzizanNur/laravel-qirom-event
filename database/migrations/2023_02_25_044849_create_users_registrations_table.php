@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('users_registrations', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 150);
-            $table->string('street_name', 250);
+            $table->string('name', 150)->nullable(true);
+            $table->string('street_name', 250)->nullable(true);
             $table->string('email')->unique();
-            $table->string('phone', 50);
-            $table->string('house_no', 50);
-            $table->string('unit_number', 50);
-            $table->string('postal_code', 50);
+            $table->string('phone', 50)->nullable(true);
+            $table->string('house_no', 50)->nullable(true);
+            $table->string('unit_number', 50)->nullable(true);
+            $table->string('postal_code', 50)->nullable(true);
+            $table->unsignedBigInteger('id_event')->nullable(true);
             $table->timestamps();
             
         });
