@@ -31,13 +31,14 @@ class UserRegistrationsController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'name'      => 'required|max:255|unique:users',
+            'name'      => 'required|max:255',
             'email'     => 'required|email|max:255|unique:users_registrations,email',
             "street_name" => 'required',
             "phone" => 'required',
             "house_no" => 'required',
             "postal_code" => 'required',
             "unit_number" => 'required',         
+            "id_event" => 'required',         
         ]);
         UsersRegistration::create($validateData);
 

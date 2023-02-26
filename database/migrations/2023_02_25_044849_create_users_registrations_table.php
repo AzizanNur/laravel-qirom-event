@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('name', 150)->nullable(true);
             $table->string('street_name', 250)->nullable(true);
             $table->string('email')->unique();
-            $table->integer('phone')->nullable(true);
-            $table->integer('house_no')->nullable(true);
-            $table->integer('unit_number')->nullable(true);
-            $table->integer('postal_code')->nullable(true);
+            $table->unsignedBigInteger('phone')->nullable(true);
+            $table->unsignedBigInteger('house_no')->nullable(true);
+            $table->unsignedBigInteger('unit_number')->nullable(true);
+            $table->unsignedBigInteger('postal_code')->nullable(true);
             $table->unsignedBigInteger('id_event')->nullable(true);
             $table->timestamps();
             

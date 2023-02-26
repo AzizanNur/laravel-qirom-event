@@ -35,18 +35,17 @@
                                         <div class="d-flex flex-column justify-content-center align-items-center align-items-lg-start me-10 text-center text-lg-start">
                                             <!--begin::Title-->
                                             <h3 class="fs-2hx line-height-lg mb-5">
-                                                <span class="fw-bold">Event A</span>
+                                                <span class="fw-bold">Bakti Sosial</span>
                                                 <br />
-                                                <span class="fw-bold">for Startups</span>
+                                                <span class="fw-bold">Call you</span>
                                             </h3>
                                             <!--end::Title-->
-                                            <div class="fs-4 text-muted mb-7">Long before you sit down to put the pen
-                                            <br />need to make sure you breathe</div>
-                                            <a href='#' class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Create an Store</a>
+                                            <div class="fs-4 text-muted mb-7">let's join with us</div>
+                                            <a href='#' class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join</a>
                                         </div>
                                         <!--end::Info-->
                                         <!--begin::Illustration-->
-                                        <img src="assets/media/illustrations/sketchy-1/11.png" alt="" class="mw-200px mw-lg-350px mt-lg-n10" />
+                                        <img src="/assets/media/flyer/a.jpeg" alt="" class="mw-200px mw-lg-350px mt-lg-n10" />
                                         <!--end::Illustration-->
                                     </div>
                                 <!--end::Body-->
@@ -61,18 +60,17 @@
                                     <div class="d-flex flex-column justify-content-center align-items-center align-items-lg-start me-10 text-center text-lg-start">
                                         <!--begin::Title-->
                                         <h3 class="fs-2hx line-height-lg mb-5">
-                                            <span class="fw-bold">Event B</span>
+                                            <span class="fw-bold">Bakti Sosial</span>
                                             <br />
-                                            <span class="fw-bold">for Startups</span>
+                                            <span class="fw-bold">Call you</span>
                                         </h3>
                                         <!--end::Title-->
-                                        <div class="fs-4 text-muted mb-7">Long before you sit down to put the pen
-                                        <br />need to make sure you breathe</div>
-                                        <a href='#' class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Create an Store</a>
+                                        <div class="fs-4 text-muted mb-7">let's join with us</div>
+                                        <a href='#' class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join</a>
                                     </div>
                                     <!--end::Info-->
                                     <!--begin::Illustration-->
-                                    <img src="assets/media/illustrations/sketchy-1/11.png" alt="" class="mw-200px mw-lg-350px mt-lg-n10" />
+                                    <img src="/assets/media/flyer/b.jpeg" alt="" class="mw-200px mw-lg-350px mt-lg-n10" />
                                     <!--end::Illustration-->
                                 </div>
                             <!--end::Body-->
@@ -87,18 +85,17 @@
                                     <div class="d-flex flex-column justify-content-center align-items-center align-items-lg-start me-10 text-center text-lg-start">
                                         <!--begin::Title-->
                                         <h3 class="fs-2hx line-height-lg mb-5">
-                                            <span class="fw-bold">Event C</span>
+                                            <span class="fw-bold">Bakti Sosial</span>
                                             <br />
-                                            <span class="fw-bold">for Startups</span>
+                                            <span class="fw-bold">Call you</span>
                                         </h3>
                                         <!--end::Title-->
-                                        <div class="fs-4 text-muted mb-7">Long before you sit down to put the pen
-                                        <br />need to make sure you breathe</div>
-                                        <a href='#' class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Create an Store</a>
+                                        <div class="fs-4 text-muted mb-7">let's join with us</div>
+                                        <a href='#' class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign">Join</a>
                                     </div>
                                     <!--end::Info-->
                                     <!--begin::Illustration-->
-                                    <img src="assets/media/illustrations/sketchy-1/11.png" alt="" class="mw-200px mw-lg-350px mt-lg-n10" />
+                                    <img src="/assets/media/flyer/c.jpeg" alt="" class="mw-200px mw-lg-350px mt-lg-n10" />
                                     <!--end::Illustration-->
                                 </div>
                             <!--end::Body-->

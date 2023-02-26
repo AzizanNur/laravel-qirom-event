@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Events;
 use Illuminate\Http\Request;
 
 class DetailController extends Controller
@@ -10,7 +11,9 @@ class DetailController extends Controller
         return view('success_page');
     }
 
-    public function show(){
-        return view('detail');
+    public function show($slug){
+        return view('detail', [
+            'events' => Events::where('slug', $slug)->latest()->get()
+        ]);
     }
 } 
