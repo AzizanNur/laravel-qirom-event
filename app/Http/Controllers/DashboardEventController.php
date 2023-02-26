@@ -38,10 +38,12 @@ class DashboardEventController extends Controller
         // print_r('tambah ya'); die;
         $validatedData = $request->validate([
             "title" => 'required|max:255',
-            'slug' => 'required|unique:events',
             'text_button' => 'required|',
             // 'image' => 'image|file|max:1024'
         ]);    
+        
+        $slug = str_replace(' ','-', strtolower($validatedData['title'])).'-'.rand(1000,9999);
+        $validatedData['slug'] = $slug;
         
         // if($request->file('image')){
         //     $validatedData['image'] = $request->file('image')->store('post-images');
