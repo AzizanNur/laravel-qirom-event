@@ -8,11 +8,17 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/events*') ? 'active' : ''}}" href="/dashboard/events">
+            <span data-feather="file-text"></span>
+            Event
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/user_registration*') ? 'active' : ''}}" href="/dashboard/user_registration">
             <span data-feather="file-text"></span>
             User Registration List
           </a>
-        </li>
+        </li>        
       </ul>
 
       {{-- @can is connect to your gate, and used name @can with your define gate--}}

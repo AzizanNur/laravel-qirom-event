@@ -1,10 +1,12 @@
 <?php
 
-use App\Http\Controllers\DashboardUserRegistrationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\DashboardEventController;
 use App\Http\Controllers\UserRegistrationsController;
+use App\Http\Controllers\DashboardUserRegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +45,8 @@ Route::get('/dashboard', function(){
     return view('dashboard.index');
 })->middleware('auth');//only user already login
 
-Route::get('/dashboard/posts/checkSlug', [DashboardUserRegistrationController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/user_registration', DashboardUserRegistrationController::class)->middleware('auth');
+Route::resource('/dashboard/events', DashboardEventController::class)->middleware('auth');
+Route::get('/dashboard/events/checkSlug', [DashboardUserRegistrationController::class, 'checkSlug'])->middleware('auth');
 
 // Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
