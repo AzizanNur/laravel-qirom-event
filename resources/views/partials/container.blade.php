@@ -49,8 +49,8 @@
                                     </svg>
                                 </span>
                                 <!--end::Svg Icon-->
-                                <span class="fs-6 fw-bold">Latest
-                                <br />Events</span>
+                                <span class="fs-6 fw-bold">Galery
+                                <br />Ramadan</span>
                             </a>
                         </li>
                         <li class="nav-item col-12 col-lg mb-5 mb-lg-0">
@@ -635,8 +635,7 @@
                             <div class="row g-6 mb-6 g-xl-9 mb-xl-9">
 								<!--begin::Followers-->
 								<!--begin::Col-->
-                                @include('events.list')
-								@include('events.list')
+                               @include('events.list')
 								<!--end::Col-->								
 								<!--end::Followers-->
 							</div>

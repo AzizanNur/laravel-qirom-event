@@ -8,6 +8,8 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardEventController;
 use App\Http\Controllers\UserRegistrationsController;
 use App\Http\Controllers\DashboardUserRegistrationController;
+use App\Http\Controllers\DetailController;
+use App\Models\Events;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,7 @@ use App\Http\Controllers\DashboardUserRegistrationController;
 */
 
 Route::get('/', [HomepageController::class, 'index']);
+Route::get("/detail/{post:slug}", [DetailController::class, 'show']);
 
 Route::get('/detail', function () {
     return view('detail');

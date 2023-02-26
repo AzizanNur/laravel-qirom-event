@@ -85,6 +85,7 @@ class DashboardEventController extends Controller
             $rules = [
                 "title" => 'required|max:255',
                 'image' => 'image|file|max:1024',                
+                'text_button' => 'required|max:150',
             ];      
             
             $validatedData = $request->validate($rules);
