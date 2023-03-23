@@ -11,7 +11,7 @@ class HomepageController extends Controller
     public function index()
     {
         return view('homepage', [
-            'events' => Events::where('is_deleted', 0)->latest()->get()
+            'events' => Events::where('is_deleted', 0)->orderBy('created_at', 'desc')->get()
         ]);
     }
     
